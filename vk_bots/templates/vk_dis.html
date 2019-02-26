@@ -1,0 +1,58 @@
+<!--
+    ▬▬▬.◙.▬▬▬ 
+═▂▄▄▓▄▄▂ 
+◢◤ █▀▀████▄▄▄▄◢◤ 
+█▄ █ █▄ ███▀▀▀▀▀▀▀╬ 
+◥█████◤ 
+══╩══╩══ 
+╬═╬ 
+╬═╬ 
+╬═╬ 
+╬═╬ 
+╬═╬ 
+╬═╬ 
+╬═╬ Привет 
+╬═╬☻/ 
+╬═╬/▌ 
+╬═╬/ \
+-->
+<html>
+<head>
+<title>Smm app</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.discordapp.com/attachments/500259890384732160/549870492786491392/style2.css">
+<link rel="shortcut icon" href="https://media.discordapp.net/attachments/500259890384732160/549874996646903808/s.png" type="image/png">
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+<!-- VK Widget -->
+<div id="vk_community_messages"></div>
+<script type="text/javascript">
+VK.Widgets.CommunityMessages("vk_community_messages", 160303113, {tooltipButtonText: "Есть вопрос?"});
+</script>
+
+</head>
+<body>
+<div class="line" role="alert">
+    <p class = 'container2 main_but'>Smm приложение для рассылок </p>
+</div>
+<div class='container'>
+    <div class='white'>
+        <div class='margin'>
+        <form action='/post/' method='post'>
+        {% csrf_token %}
+            <div class='right'>
+            <span>{{ forms.login }}</span>
+            <span>{{ forms.password }} </span>
+            </div>
+        <div class='top'>
+        <p>{{ forms.message }} </p>
+        </div>
+        <p>Прикрепить фото: {{ forms.photo }} <span><a href='https://vk.com/topic-160303113_40084951'><small>Инструкция</small></a></span></p>
+    <div class='container2'>
+    <input type='submit' value='Разослать' class="bot btn btn-primary ">
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
